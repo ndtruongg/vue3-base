@@ -1,0 +1,87 @@
+@mixin input_box($width_box) {
+  width: 100%;
+  display: flex;
+
+  .label-wrap {
+    label {
+      font-weight: 600;
+      width: 240px;
+      height: 39px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  .required-wrap {
+    height: 39px;
+    display: inline-flex;
+    align-items: center;
+
+    .required_input {
+      color: #ffffff;
+      font-size: 12px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background-color: #f32525;
+      margin: 0 15px 0 25px;
+      padding: 0px 7px;
+    }
+
+    .optional {
+      background-color: #4a7d8f;
+    }
+  }
+
+  .r-input {
+    display: inline-grid;
+    margin-bottom: 10px;
+    position: relative;
+
+    input {
+      border: 1px solid #9f9f9f66;
+      border-radius: 2px;
+      outline: none;
+      padding: 8px 10px;
+      width: $width_box;
+      color: #222222;
+
+      &:focus {
+        border: 1px solid #04a4de;
+        caret-color: #04a4de;
+        color: #000000;
+      }
+    }
+
+    input[type='password'] {
+      -webkit-text-security: square;
+      font-family: Verdana;
+    }
+
+    &_eye-icon {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+    }
+
+    &_validate {
+      color: #fd4444;
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 4px;
+    }
+
+    .pwd {
+      max-width: 560px;
+      color: #626262;
+    }
+
+    .select {
+      width: $width_box;
+      height: 48px;
+    }
+  }
+}
+
+@mixin yourMixin {
+  // css code
+}

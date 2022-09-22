@@ -1,0 +1,11 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mediaQuery' as *;
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
