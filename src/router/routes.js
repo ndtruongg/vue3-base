@@ -8,26 +8,32 @@ const views = (path) => {
 export default [
   {
     path: '/',
-    name: 'Home',
-    component: views('Home.vue'),
-    meta: {
-      middleware: log
-    }
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: views('About.vue'),
-    meta: {
-      middleware: [log, auth]
-    }
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: views('Login.vue'),
-    meta: {
-      middleware: log
-    }
+    component: () => import('@/components/templates/TheMain.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Home',
+        component: views('Home.vue'),
+        meta: {
+          middleware: log
+        }
+      },
+      {
+        path: 'about',
+        name: 'About',
+        component: views('About.vue'),
+        meta: {
+          middleware: [log, auth]
+        }
+      },
+      {
+        path: 'login',
+        name: 'Login',
+        component: views('Login.vue'),
+        meta: {
+          middleware: log
+        }
+      }
+    ]
   }
 ];

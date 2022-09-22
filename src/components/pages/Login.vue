@@ -3,12 +3,12 @@
     <form @submit.prevent="handleSubmit()">
       <div>
         <label for="">Username</label>
-        <input type="text" name="username" v-model="username" />
+        <input type="text" autocomplete="false" v-model="username" />
       </div>
 
       <div>
         <label for="">Password</label>
-        <input type="password" name="password" v-model="password" />
+        <input type="password" autocomplete="false" v-model="password" />
       </div>
     </form>
   </div>
