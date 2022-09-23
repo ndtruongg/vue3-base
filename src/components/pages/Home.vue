@@ -4,4 +4,14 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useUserStore } from '@/store/useUserStore';
+
+const user = useUserStore();
+
+console.log(user);
+
+user.getInfo();
+
+// console.log(user);
+</script>
