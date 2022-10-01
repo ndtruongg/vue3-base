@@ -1,20 +1,19 @@
 <template>
   <div class="news">
     <div class="news__img">
-      <img
-        src="https://img.hoidap247.com/picture/answer/20200925/large_1601033451475.jpg"
-        alt="badminton"
-      />
+      <Skeleton height="100px" width="100px" border-radius="50%" />
     </div>
     <div class="news__detail">
-      <h3>Badminton</h3>
-      <p>Lororibus incidunt! Vitae sunt in adipisci amet placeat ea?</p>
+      <Skeleton height="24px" class="mb-10" width="200px" border-radius="3px" />
+      <Skeleton height="16px" class="mb-5" width="100%" border-radius="3px" />
+      <Skeleton height="16px" class="mb-5" width="100%" border-radius="3px" />
+      <Skeleton height="16px" width="100%" border-radius="3px" />
     </div>
   </div>
 </template>
 
 <script setup>
-await new Promise((res) => setTimeout(res, 2000));
+import Skeleton from '../atoms/Skeleton.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -30,17 +29,11 @@ await new Promise((res) => setTimeout(res, 2000));
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
-
-    img {
-      width: 100%;
-    }
   }
 
   &__detail {
     padding: 0 12px;
-    h3 {
-      font-size: 18px;
-    }
+    flex-grow: 1;
   }
 }
 </style>

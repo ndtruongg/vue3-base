@@ -33,6 +33,11 @@ export default [
         meta: {
           middleware: log
         }
+      },
+      {
+        path: 'components',
+        name: 'Components',
+        component: views('Components.vue')
       }
     ]
   }
