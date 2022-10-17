@@ -38,6 +38,11 @@ export default [
         path: 'components',
         name: 'Components',
         component: views('Components.vue')
+      },
+      {
+        path: 'vue-use',
+        name: 'VueUse',
+        component: views('VueUse.vue')
       }
     ]
   }
