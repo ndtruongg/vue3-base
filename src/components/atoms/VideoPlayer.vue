@@ -50,13 +50,9 @@ import {
   computed,
   watch,
   defineEmits,
-  defineProps,
-  onBeforeUnmount
+  defineProps
 } from 'vue';
 
-import { useStore } from 'vuex';
-
-const store = useStore();
 let video = reactive({});
 let progressBar = reactive({});
 let seek = reactive({});
@@ -87,10 +83,10 @@ watch(
 
 const controlIcon = computed(() => {
   if (playing.value) {
-    return require('@/assets/image/icon_pause.svg');
+    return require('@/assets/images/icon_pause.svg');
   }
 
-  return require('@/assets/image/icon_play.svg');
+  return require('@/assets/images/icon_play.svg');
 });
 
 onMounted(() => {
@@ -113,11 +109,6 @@ onMounted(() => {
 
   initializeVideo();
   video.addEventListener('timeupdate', updateProgress);
-});
-
-onBeforeUnmount(() => {
-  videoUrl.value = '';
-  store.commit('lecture/videoLesson', '');
 });
 
 const updateProgress = () => {
