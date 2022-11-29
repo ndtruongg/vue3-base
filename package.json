@@ -2,6 +2,9 @@
   "name": "vue3-base",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "test": "run-s test:*",
     "serve": "vue-cli-service serve",
