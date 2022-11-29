@@ -8,7 +8,8 @@
     "test:eslint": "eslint './src/**/*.{js,jsx,vue}'",
     "autofix:eslint": "eslint --fix './src/**/*.{js,jsx,vue}'",
     "autofix:prettier": "prettier --write './src/**/*.{js,jsx,vue}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@vueuse/core": "^9.6.0",
