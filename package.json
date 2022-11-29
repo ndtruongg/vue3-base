@@ -15,7 +15,7 @@
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
     "dayjs": "^1.11.5",
-    "husky": "^8.0.2",
+    "husky": ">=6",
     "js-cookie": "^3.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
@@ -41,6 +41,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue}": "eslint --fix src/",
-    "*.{js,jsx,vue,json,css,md}": "prettier --write"
+    "*.{js,jsx,vue,json,css,md}": "prettier --write",
+    "*.js": "eslint --cache --fix"
   }
 }
