@@ -7,14 +7,14 @@ import { defineProps } from 'vue';
 
 defineProps({
   height: {
-    type: String
+    type: String,
   },
   width: {
-    type: String
+    type: String,
   },
   borderRadius: {
-    type: String
-  }
+    type: String,
+  },
 });
 </script>
 

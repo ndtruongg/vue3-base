@@ -14,7 +14,7 @@ const storeModule = requireContext
   }, {});
 
 const store = createStore({
-  modules: storeModule
+  modules: storeModule,
 });
 
 export default store;

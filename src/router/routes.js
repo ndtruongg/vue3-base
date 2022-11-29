@@ -15,35 +15,35 @@ export default [
         name: 'Home',
         component: views('Home.vue'),
         meta: {
-          middleware: log
-        }
+          middleware: log,
+        },
       },
       {
         path: 'about',
         name: 'About',
         component: views('About.vue'),
         meta: {
-          middleware: [log, auth]
-        }
+          middleware: [log, auth],
+        },
       },
       {
         path: 'login',
         name: 'Login',
         component: views('Login.vue'),
         meta: {
-          middleware: log
-        }
+          middleware: log,
+        },
       },
       {
         path: 'components',
         name: 'Components',
-        component: views('Components.vue')
+        component: views('Components.vue'),
       },
       {
         path: 'vue-use',
         name: 'VueUse',
-        component: views('VueUse.vue')
-      }
-    ]
-  }
+        component: views('VueUse.vue'),
+      },
+    ],
+  },
 ];

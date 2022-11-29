@@ -8,7 +8,7 @@
 import { inject, defineProps } from 'vue';
 
 defineProps({
-  title: String
+  title: String,
 });
 
 const selectedTitle = inject('selectedTitle');

@@ -50,7 +50,7 @@ import {
   computed,
   watch,
   defineEmits,
-  defineProps
+  defineProps,
 } from 'vue';
 
 let video = reactive({});
@@ -66,8 +66,8 @@ const emits = defineEmits(['ended-video', 'current-time']);
 const props = defineProps({
   src: {
     type: String,
-    require: true
-  }
+    require: true,
+  },
 });
 
 watch(

@@ -3,14 +3,14 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref, computed } from "vue";
+import { defineProps, onMounted, ref, computed } from 'vue';
 
 const props = defineProps({
   comment: Object,
 });
 
 const i = ref(0);
-const text = ref("");
+const text = ref('');
 
 const height = computed(() => {
   const txt = props.comment.content;

@@ -2,7 +2,7 @@ import axios from 'axios';
 import jsCookie from 'js-cookie';
 
 const instance = axios.create({
-  baseURL: process.env.VUE_APP_API_ENDPOINT
+  baseURL: process.env.VUE_APP_API_ENDPOINT,
 });
 
 instance.interceptors.request.use(
@@ -18,7 +18,7 @@ instance.interceptors.request.use(
     if (userAccountId) {
       request.params = {
         ...request.params,
-        user_auth_id: userAccountId
+        user_auth_id: userAccountId,
       };
     }
 

@@ -11,5 +11,5 @@ export default {
   },
   unmounted(el) {
     document.body.removeEventListener('click', el.__vueClickEventHandler__);
-  }
+  },
 };

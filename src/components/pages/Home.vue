@@ -9,28 +9,28 @@
 </template>
 
 <script setup>
-import VideoPlayer from "@/components/atoms/VideoPlayer.vue";
-import { reactive } from "vue";
-import CommentBox from "../atoms/CommentBox.vue";
+import VideoPlayer from '@/components/atoms/VideoPlayer.vue';
+import { reactive } from 'vue';
+import CommentBox from '../atoms/CommentBox.vue';
 
-const videoUrl = require("@/assets/videos/left_and_right.mp4");
+const videoUrl = require('@/assets/videos/left_and_right.mp4');
 
 let comments = reactive([
   {
     id: 1,
-    content: "Lorem ipsum dolor sit amet consectetur.",
+    content: 'Lorem ipsum dolor sit amet consectetur.',
   },
   {
     id: 2,
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elolore iusto.",
+      'Lorem ipsum dolor sit amet consectetur adipisicing elolore iusto.',
   },
 ]);
 
 const generatorParagraph = (length) => {
-  let txt = "";
+  let txt = '';
   for (let i = 0; i < length + 1; i++) {
-    txt += "也称乱";
+    txt += '也称乱';
   }
 
   return txt;
