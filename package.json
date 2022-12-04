@@ -16,6 +16,7 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@vueup/vue-quill": "^1.0.0",
     "@vueuse/core": "^9.6.0",
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
