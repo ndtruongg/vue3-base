@@ -1,4 +1,4 @@
-import auth from '@/middleware/auth';
+// import auth from '@/middleware/auth';
 import log from '@/middleware/log';
 
 const views = (path) => {
@@ -23,7 +23,7 @@ export default [
         name: 'About',
         component: views('About.vue'),
         meta: {
-          middleware: [log, auth],
+          middleware: [log],
         },
       },
       {
