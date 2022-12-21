@@ -5,6 +5,7 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/vue-use">VueUse</router-link> |
     <router-link to="/components">Components</router-link>
+    <router-link to="/jwplayer">JWPlayer</router-link>
   </div>
   <router-view />
   <TheFooter />

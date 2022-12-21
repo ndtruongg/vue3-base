@@ -44,6 +44,16 @@ export default [
         name: 'VueUse',
         component: views('VueUse.vue'),
       },
+      {
+        path: 'test',
+        name: 'test',
+        component: views('Test.vue'),
+      },
+      {
+        path: 'jwplayer',
+        name: 'jwplayer',
+        component: views('Jwplayer.vue'),
+      },
     ],
   },
 ];

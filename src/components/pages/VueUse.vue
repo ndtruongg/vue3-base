@@ -1,7 +1,6 @@
 <template>
   <div>
     <p>X: {{ x }}</p>
-
     <p>Y: {{ y }}</p>
   </div>
 </template>
