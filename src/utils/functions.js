@@ -13,7 +13,7 @@ const Functions = {
       if (type === 'en-US') {
         return new Intl.NumberFormat(type, {
           style: 'decimal',
-          maximumFractionDigits: 20
+          maximumFractionDigits: 20,
         }).format(num);
       }
       return parseFloat(num);
@@ -22,7 +22,7 @@ const Functions = {
     Object.keys(App).forEach((properties) => {
       app.provide(properties, App[properties]);
     });
-  }
+  },
 };
 
 export default Functions;

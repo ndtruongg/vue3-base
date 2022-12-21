@@ -9,7 +9,7 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth'
+        behavior: 'smooth',
       };
     }
     if (savedPosition) {
@@ -17,9 +17,9 @@ const router = createRouter({
     }
     return {
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     };
-  }
+  },
 });
 
 router.beforeEach((to, from, next) => {
@@ -35,7 +35,7 @@ router.beforeEach((to, from, next) => {
     from,
     next,
     router,
-    to
+    to,
   };
   const nextMiddleware = middlewarePipeline(context, middleware, 1);
 

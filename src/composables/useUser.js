@@ -3,7 +3,7 @@ import { ref, toRefs } from 'vue';
 export const useUser = () => {
   const user = ref({
     name: 'Shane',
-    age: 26
+    age: 26,
   });
 
   const resetName = () => {
@@ -12,6 +12,6 @@ export const useUser = () => {
 
   return {
     resetName,
-    ...toRefs(user.value)
+    ...toRefs(user.value),
   };
 };

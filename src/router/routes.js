@@ -1,4 +1,4 @@
-import auth from '@/middleware/auth';
+// import auth from '@/middleware/auth';
 import log from '@/middleware/log';
 
 const views = (path) => {
@@ -15,25 +15,45 @@ export default [
         name: 'Home',
         component: views('Home.vue'),
         meta: {
-          middleware: log
-        }
+          middleware: log,
+        },
       },
       {
         path: 'about',
         name: 'About',
         component: views('About.vue'),
         meta: {
-          middleware: [log, auth]
-        }
+          middleware: [log],
+        },
       },
       {
         path: 'login',
         name: 'Login',
         component: views('Login.vue'),
         meta: {
-          middleware: log
-        }
-      }
-    ]
-  }
+          middleware: log,
+        },
+      },
+      {
+        path: 'components',
+        name: 'Components',
+        component: views('Components.vue'),
+      },
+      {
+        path: 'vue-use',
+        name: 'VueUse',
+        component: views('VueUse.vue'),
+      },
+      {
+        path: 'test',
+        name: 'test',
+        component: views('Test.vue'),
+      },
+      {
+        path: 'jwplayer',
+        name: 'jwplayer',
+        component: views('Jwplayer.vue'),
+      },
+    ],
+  },
 ];

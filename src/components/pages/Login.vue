@@ -26,7 +26,7 @@ const password = ref('');
 const handleSubmit = () => {
   const formData = {
     username: username.value,
-    password: password.value
+    password: password.value,
   };
 
   console.log(formData);

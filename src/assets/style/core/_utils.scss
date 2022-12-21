@@ -7,37 +7,37 @@
       .mr-#{$size}-#{$i * 5} {
         margin-right: $i * 5px;
       }
-    
+
       // margin-left
       .ml-#{$size}-#{$i * 5} {
         margin-left: $i * 5px;
       }
-    
+
       // margin-top
       .mt-#{$size}-#{$i * 5} {
         margin-top: $i * 5px;
       }
-    
+
       // margin-bottom
       .mb-#{$size}-#{$i * 5} {
         margin-bottom: $i * 5px;
       }
-    
+
       //padding-top
       .pt-#{$size}-#{$i * 5} {
         padding-top: $i * 5px;
       }
-    
+
       //padding-bottom
       .pb-#{$size}-#{$i * 5} {
         padding-bottom: $i * 5px;
       }
-    
+
       //padding-left
       .pl-#{$size}-#{$i * 5} {
         padding-left: $i * 5px;
       }
-    
+
       //padding-right
       .pr-#{$size}-#{$i * 5} {
         padding-right: $i * 5px;
@@ -151,16 +151,16 @@ $alignItems: ('center', 'start', 'between', 'end');
     @include mq($size) {
       @if $align == 'between' {
         .align-#{$size}-#{$align} {
-          align-items: #{ 'space-' + $align};
+          align-items: #{'space-' + $align};
         }
         .justify-#{$size}-#{$align} {
           justify-content: #{'space-' + $align};
         }
       } @else if $align == 'start' {
         .align-#{$size}-#{$align} {
-          align-items:  #{'flex-' + $align};
+          align-items: #{'flex-' + $align};
         }
-        
+
         .justify-#{$size}-#{$align} {
           justify-content: #{'flex-' + $align};
         }
@@ -168,7 +168,7 @@ $alignItems: ('center', 'start', 'between', 'end');
         .align-#{$size}-#{$align} {
           align-items: #{'flex-' + $align};
         }
-      
+
         .justify-#{$size}-#{$align} {
           justify-content: #{'flex-' + $align};
         }
