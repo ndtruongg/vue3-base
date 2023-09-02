@@ -36,5 +36,9 @@ export const routes = [
     path: '/not-found',
     name: 'Not Found',
     component: getView('NotFound')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: getView('NotFound')
   }
 ]
