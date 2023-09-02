@@ -2,5 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn check:duplicate
+yarn lint
 yarn test:run
 yarn build
