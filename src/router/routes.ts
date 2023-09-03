@@ -5,14 +5,20 @@ const getView = (path: string) => {
 export const routes = [
   {
     path: '/',
+    component: () => import('@/layouts/DefaultLayout.vue'),
     children: [
       {
         path: '',
         name: 'Home',
         component: getView('HomeView'),
         meta: {
-          auth: true
+          auth: false
         }
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: getView('AboutView')
       },
       {
         path: 'auth/login',
@@ -21,12 +27,6 @@ export const routes = [
       }
     ]
   },
-  {
-    path: '/about',
-    name: 'about',
-    component: getView('AboutView')
-  },
-
   {
     path: '/internal-error',
     name: 'Internal Server Error',
