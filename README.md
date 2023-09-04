@@ -12,7 +12,39 @@ This template should help get you started developing with Vue 3 in Vite.
 2. [Pinia](https://pinia.vuejs.org/introduction.html): State management, use as a composable in vue 3, [core-concept](https://pinia.vuejs.org/core-concepts/)
 3. [Js-cookie](https://www.npmjs.com/package/js-cookie): Simple and lightweight for handling cookie
 4. [Vue-router](https://router.vuejs.org/guide/essentials/dynamic-matching.html): Official router for Vue, if you have a nested router, [read it](https://router.vuejs.org/guide/essentials/nested-routes.html)
-5. [Vue 3](https://vuejs.org/guide/typescript/composition-api.html#typing-component-props): Composition API
+5. [Vee-validate](https://vee-validate.logaretm.com/v4/guide/components/handling-forms/): Validate with Vee, it is very simple
+
+```vue
+<template>
+  <Form @submit="onSubmit" :validation-schema="schema">
+    <Field name="email" type="email" />
+    <ErrorMessage name="email" />
+
+    <Field name="password" type="password" />
+    <ErrorMessage name="password" />
+
+    <button>Submit</button>
+  </Form>
+</template>
+<script setup>
+import { Form, Field, ErrorMessage } from 'vee-validate'
+import * as yup from 'yup'
+
+const schema = yup.object({
+  email: yup.string().required().email(),
+  password: yup.string().required().min(8)
+})
+
+function onSubmit(values) {
+  // Submit values to API...
+  alert(JSON.stringify(values, null, 2))
+}
+</script>
+```
+
+- If you need custom, read [custom-input](https://vee-validate.logaretm.com/v4/guide/composition-api/custom-inputs/)
+
+6. [Vue 3](https://vuejs.org/guide/typescript/composition-api.html#typing-component-props): Composition API
 
 ## What do you have to do?
 
