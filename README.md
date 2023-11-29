@@ -46,6 +46,24 @@ function onSubmit(values) {
 
 6. [Vue 3](https://vuejs.org/guide/typescript/composition-api.html#typing-component-props): Composition API
 
+7. Auto import your component, config in `vite.config.ts`
+
+```ts
+Components({
+  dirs: ['src/components'],
+  // ...
+}),
+```
+
+8. Auto import component of Library
+
+```ts
+AutoImport({
+  imports: ['vue', 'vue-router', 'vue-i18n', 'vee-validate', 'pinia']
+  // ...
+})
+```
+
 ## What do you have to do?
 
 1. Create branch start with one of keywords: `feature|feedback|force|hotfix|revert|reset|refactor|release` and your task id
