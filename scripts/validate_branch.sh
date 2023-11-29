@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_branch_regex='^((feature|feedback|force|hotfix|revert|reset|refactor|release)\/[a-zA-Z0-9\-]+)$'
+valid_branch_regex='^((feat|feedback|force|hotfix|revert|reset|refactor|release)\/[a-zA-Z0-9\-]+)$'
 
 message="Branch name invalidate, regex: $valid_branch_regex"
 
