@@ -28,8 +28,9 @@
             data-aos="zoom-y-out"
           >
             Make your website
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"
-              >wonderful</span
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"
+              >{{ $t('module.hello') }}</span
             >
           </h1>
           <div class="max-w-3xl mx-auto">

@@ -10,7 +10,7 @@ export const routes = [
       {
         path: '',
         name: 'Home',
-        component: getView('HomeView'),
+        component: getView('Home'),
         meta: {
           auth: false
         }
