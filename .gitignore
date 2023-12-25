@@ -30,3 +30,5 @@ report
 
 auto-imports.d.ts
 components.d.ts
+
+.env
