@@ -9,7 +9,7 @@ class Http {
 
   constructor() {
     this.instance = axios.create({
-      baseURL: import.meta.env.API_ENDPOINT,
+      baseURL: import.meta.env.VITE_API_ENDPOINT,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
