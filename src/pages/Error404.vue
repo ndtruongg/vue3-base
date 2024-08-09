@@ -1,12 +1,24 @@
-<template>
-  <div class="flex flex-col items-center">
-    <h1 class="text-5xl mb-3 font-bold text-center">404</h1>
-    <h4 class="text-xl mb-10 font-semibold text-center">Oops! Not Found.</h4>
+<script setup lang="ts">
+import misc404 from '@images/pages/404.png'
+</script>
 
-    <ButtonHome />
+<template>
+  <div class="misc-wrapper">
+    <ErrorHeader
+      status-code="404"
+      title="Page Not Found ⚠️"
+      description="We couldn't find the page you are looking for."
+    />
+
+    <VBtn to="/" class="mb-6"> Back to Home </VBtn>
+
+    <!-- 👉 Image -->
+    <div class="misc-avatar w-100 text-center">
+      <VImg :src="misc404" alt="Page Not Found" :max-width="500" class="mx-auto" />
+    </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped></style>
+<style lang="scss">
+@use '@core/scss/template/pages/misc.scss';
+</style>

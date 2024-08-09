@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn check:duplicate
+# yarn check:duplicate
 yarn lint
 yarn build

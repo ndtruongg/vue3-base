@@ -9,6 +9,7 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   await middlewareAuth(to, from, next)
+  document.title = import.meta.env.VITE_APP_NAME || ''
 })
 
 export default router

@@ -1,9 +1,5 @@
 import { SCREEN } from './screen'
 
-const getPage = (path: string) => {
-  return () => import(`@/pages/${path}.vue`)
-}
-
 export const routes = [
   {
     path: SCREEN.home.path,
@@ -12,30 +8,61 @@ export const routes = [
       {
         path: '',
         name: SCREEN.home.name,
-        component: getPage('Home'),
-        meta: {
-          auth: false
+        redirect: {
+          name: SCREEN.dashboard.name
         }
       },
       {
-        path: SCREEN.login.path,
-        name: SCREEN.login.name,
-        component: getPage('Login')
+        path: SCREEN.dashboard.path,
+        name: SCREEN.dashboard.name,
+        component: () => import(`@/pages/dashboard.vue`)
+      },
+
+      {
+        path: 'icons',
+        name: 'Icons',
+        component: () => import('@/pages/icons.vue')
+      },
+      {
+        path: 'typography',
+        name: 'Typography',
+        component: () => import('@/pages/typography.vue')
+      },
+      {
+        path: 'tables',
+        name: 'Tables',
+        component: () => import('@/pages/tables.vue')
+      },
+      {
+        path: 'form-layouts',
+        name: 'form-layouts',
+        component: () => import('@/pages/form-layouts.vue')
       }
     ]
   },
   {
-    path: '/loi-he-thong',
-    name: 'Internal Server Error',
-    component: getPage('Error500')
-  },
-  {
-    path: '/khong-tim-thay',
-    name: 'Not Found',
-    component: getPage('Error404')
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    component: getPage('Error404')
+    path: '/',
+    component: () => import('@/layouts/blank.vue'),
+    children: [
+      {
+        path: SCREEN.login.path,
+        name: SCREEN.login.name,
+        component: () => import('@/pages/login.vue')
+      },
+      {
+        path: '/loi-he-thong',
+        name: 'Internal Server Error',
+        component: () => import('@/pages/error500.vue')
+      },
+      {
+        path: '/khong-tim-thay',
+        name: 'Not Found',
+        component: () => import('@/pages/error404.vue')
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        component: () => import('@/pages/error404.vue')
+      }
+    ]
   }
 ]

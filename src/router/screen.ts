@@ -3,6 +3,10 @@ export const SCREEN = {
     path: '/',
     name: 'Home'
   },
+  dashboard: {
+    path: 'dashboard',
+    name: 'Dashboard'
+  },
   login: {
     path: '/dang-nhap',
     name: 'Login'
