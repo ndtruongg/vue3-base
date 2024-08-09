@@ -1,6 +1,5 @@
 import { ACCESS_TOKEN } from '@/constants/common.const'
 import { SCREEN } from '@/router/screen'
-import http from '@/utils/http'
 import { getCookie } from '@/utils/token'
 
 export default async function auth(to: any, from: any, next: any) {
