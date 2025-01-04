@@ -1,8 +1,8 @@
 import { h, createApp } from 'vue'
 import Toast from '../components/Toast.vue'
 
-function renderToast(message: string, duration = 3000) {
-  const dialogContainer = document.getElementById('dialog')
+function renderToast(message: string, duration = 30000) {
+  const dialogContainer = document.getElementById('toast')
   if (!dialogContainer) return
 
   const toastContainer = document.createElement('div')
@@ -10,7 +10,13 @@ function renderToast(message: string, duration = 3000) {
 
   const app = createApp({
     render() {
-      return h(Toast, { message })
+      return h(Toast, {
+        message,
+        onClose: () => {
+          app.unmount()
+          dialogContainer.removeChild(toastContainer)
+        }
+      })
     }
   })
 
